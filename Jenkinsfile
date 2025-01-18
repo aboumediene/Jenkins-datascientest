@@ -46,7 +46,7 @@ stages {
             }
             steps {
                 script {
-                     echo "----- pushing image with password "   + $DOCKER_PASS
+                     echo "----- pushing image with password "   + DOCKER_PASS
                 }
                 script {
                 sh '''
