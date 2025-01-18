@@ -44,8 +44,9 @@ stages {
             {
                 DOCKER_PASS = credentials("DOCKER_HUB_PASS") // we retrieve  docker password from secret text called docker_hub_pass saved on jenkins
             }
-                echo "----- pushing image with password "   + $DOCKER_PASS
-
+             steps {
+                     echo "----- pushing image with password "   + $DOCKER_PASS
+             }
             steps {
                 script {
                 sh '''
